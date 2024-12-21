@@ -1,7 +1,7 @@
 <resources>
     <string name="app_name">FinalProject</string>
     <string name= "food_url">http://openapi.foodsafetykorea.go.kr/api/</string>
-    <string name="key">34bc4b0c785d44638d83</string>
+    <string name="keyId">34bc4b0c785d44638d83</string>
     <string name="serviceId">COOKRCP01</string>
 
     <string-array name="recipe_categories">

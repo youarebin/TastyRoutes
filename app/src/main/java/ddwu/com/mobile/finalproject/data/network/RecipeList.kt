@@ -1,22 +1,24 @@
 package ddwu.com.mobile.finalproject.data.network
 
-data class Root(
-    val cookrcP01: COOKRCP01
+data class RecipeRoot(
+    val cookrcP01: RecipeData
 )
 
-data class COOKRCP01 (
-    val row : List<Row>
+data class RecipeData (
+    val row : List<RecipeDetail>
 )
 
-data class Row (
-    val MANUAL_IMG02: String,
-    val RCP_NM: String,
-    val RCP_PAT2: String,
-    val RCP_PARTS_DTLS: String,
-    val MANUAL: List<Manual>,
+data class RecipeDetail (
+    val manualImageUrl: String, //ATT_FILE_NO_MAIN(소)
+    val recipeName: String, //RCP_NM
+    val recipeType: String, //RCP_PAT2
+    val recipeDetails: String, //RCP_PARTS_DTLS
+    val hashTag: String, //HASH_TAG
+    val dd: Int, //INFO_ENG
+    val instructions: List<Instruction>, //레시피 단계(text,img)
 )
 
-data class Manual (
-    val manualText: String,
-    val manualImage: String,
+data class Instruction(
+    val text: String, //MANUAL01, MANUAL02 ...
+    val imageUrl: String //MANUAL_IMG01, MANUAL_IMG02 ...
 )
