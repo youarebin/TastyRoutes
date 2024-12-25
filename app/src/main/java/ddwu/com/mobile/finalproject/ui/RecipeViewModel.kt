@@ -6,22 +6,22 @@ import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import ddwu.com.mobile.finalproject.data.RecipeRepository
-import ddwu.com.mobile.finalproject.data.network.RecipeDetail
+import ddwu.com.mobile.finalproject.data.network.Recipe.RecipeDetail
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class RecipeViewModel(private val recipeRepository: RecipeRepository) : ViewModel()  {
 
-    //레시피 목록
+    //api-레시피 목록
     private val _recipes = MutableLiveData<List<RecipeDetail>>()
     val recipes : LiveData<List<RecipeDetail>> = _recipes
 
-    fun getRecipes(startIdx: Int, endIdx: Int, dataType: String) = viewModelScope.launch {
-        _recipes.value = recipeRepository.getRecipes(startIdx, endIdx, dataType)
+    fun getRecipes(startIdx: Int, endIdx: Int, dataType: String, ingredient: String? = null) = viewModelScope.launch {
+        _recipes.value = recipeRepository.getRecipes(startIdx, endIdx, dataType, ingredient)
     }
 
-    //레시피 이미지
+    //api-레시피 이미지
     private val _drawable = MutableLiveData<Bitmap>()
     val drawable : LiveData<Bitmap> = _drawable
 

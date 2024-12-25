@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<network-security-config>
+    <domain-config cleartext-traffic-permitted="true">
+        <domain includeSubdomains="true">www.foodsafetykorea.go.kr</domain> <!-- HTTP를 허용할 도메인 추가 -->
+    </domain-config>
+</network-security-config>

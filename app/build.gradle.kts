@@ -6,7 +6,7 @@ plugins {
 
 android {
     namespace = "ddwu.com.mobile.finalproject"
-    compileSdk = 34
+    compileSdk = 35
 
     defaultConfig {
         applicationId = "ddwu.com.mobile.finalproject"
@@ -52,6 +52,7 @@ dependencies {
 
     // Coroutine
     implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.9.0")
+
     // ROOM
     val room_version = "2.6.1"
     implementation("androidx.room:room-runtime:$room_version")
@@ -76,4 +77,10 @@ dependencies {
 
     // Glide
     implementation("com.github.bumptech.glide:glide:4.16.0")
+
+    // Google Play Services
+    implementation("com.google.android.gms:play-services-location:21.3.0")
+
+    // GoogleMap
+    implementation ("com.google.android.gms:play-services-maps:19.0.0")
 }

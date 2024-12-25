@@ -1,12 +1,21 @@
 <resources>
     <string name="app_name">FinalProject</string>
-    <string name= "food_url">http://openapi.foodsafetykorea.go.kr/api/</string>
+
+    <!--식품의약처 조리식품의 레시피 DB api 사용-->
+    <string name= "food_url">https://openapi.foodsafetykorea.go.kr/api/</string>
     <string name="keyId">34bc4b0c785d44638d83</string>
     <string name="serviceId">COOKRCP01</string>
 
+    <!--네이버 지역 api 사용-->
+    <string name="naver_url">https://openapi.naver.com/</string>
+    <string name="client_id">YEJ2uHCYNqwxv8W55CLw</string>
+    <string name="client_secret">2KOa0sL6o5</string>
+
+    <!--드롭 다운-->
     <string-array name="recipe_categories">
         <item>밥</item>
-        <item>후식</item>
+        <item>반찬</item>
         <item>국/찌개</item>
+        <item>후식</item>
     </string-array>
 </resources>
