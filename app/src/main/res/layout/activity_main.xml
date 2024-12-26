@@ -80,6 +80,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
         android:text="오늘 뭐 먹지?"
+
         android:textSize="24sp"
         app:layout_constraintBottom_toTopOf="@+id/myRecipeBtn"
         app:layout_constraintEnd_toEndOf="parent"
